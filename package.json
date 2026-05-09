@@ -1,0 +1,52 @@
+{
+  "name": "aigma",
+  "version": "0.1.10",
+  "description": "Aigma CLI — generate canvas nodes from your terminal",
+  "license": "MIT",
+  "homepage": "https://aigma.co",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pro-ect/aigma-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pro-ect/aigma-cli/issues"
+  },
+  "keywords": [
+    "aigma",
+    "cli",
+    "ai",
+    "html",
+    "design",
+    "canvas"
+  ],
+  "type": "module",
+  "bin": {
+    "aigma": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "commander": "^12.1.0",
+    "open": "^10.1.0",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "files": [
+    "dist",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ]
+}
